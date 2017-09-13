@@ -1,0 +1,36 @@
+;###### 												#####
+.include "def\yn2313def.inc"
+.include "macrobaselib.inc"
+
+;######				 INTERRUPTS TABLE 					#####
+rjmp		RESET ;External Pin, Power-on Reset, Brown-out Reset, 
+reti; 	rjmp EXT_INT0 		; External Interrupt Request 0
+reti; 	rjmp EXT_INT1 		; External Interrupt Request 1
+reti; 	rjmp TIMER1_CAPT 	; Timer/Counter1 Capture Event
+reti; 	rjmp TIMER1_COMPA 	; Timer/Counter1 Compare Match A
+reti; 	rjmp TIMER1_OVF 	; Timer/Counter1 Overflow
+reti; 	rjmp TIMER0_OVF 	; Timer/Counter0 Overflow
+reti; 	rjmp USART0_RX		; USART0, Rx Complete
+reti; 	rjmp USART0_UDRE	; USART0 Data Register Empty
+reti; 	rjmp USART0_TX		; USART0, Tx Complete
+reti; 	rjmp ANALOG_COMP	; Analog Comparator
+reti; 	rjmp PCINT			; Pin Change Interrupt
+reti; 	rjmp TIMER1_COMPB	; Timer/Counter1 Compare Match B
+reti; 	rjmp TIMER0_COMPA 	; Timer/Counter0 Compare Match A
+reti; 	rjmp TIMER0_COMPB	; Timer/Counter0 Compare Match B
+reti; 	rjmp USI_START		; USI Start Condition
+reti; 	rjmp USI_OVERFLOW 	; USI Overflow
+reti; 	rjmp EE_READY 		; EEPROM Ready
+reti; 	rjmp WDT			; Watchdog Timer Overflow
+
+;######				INTERRUPTS HANDLERS				#####
+
+;######				SUBROUTINES & FUNCTIONS				#####
+
+;######					MAIN PROGRAM					#####
+RESET: 
+STACKINIT
+	
+
+
+	

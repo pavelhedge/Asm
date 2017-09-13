@@ -1,0 +1,35 @@
+;###### 												#####
+.include "def\m8def.inc"
+.include "macrobaselib.inc"
+
+;######				 INTERRUPTS TABLE 					#####
+		rjmp RESET ;External Pin, Power-on Reset, Brown-out Reset, and Watchdog Reset
+reti; 	rjmp INT0 		; External Interrupt Request 0
+reti; 	rjmp INT1 		; External Interrupt Request 1
+reti; 	rjmp TIMER2 	; COMP Timer/Counter2 Compare Match
+reti;	rjmp TIMER2 	; OVF Timer/Counter2 Overflow
+reti; 	rjmp TIMER1 	; CAPT Timer/Counter1 Capture Event
+reti; 	rjmp TIMER1 	; COMPA Timer/Counter1 Compare Match A
+reti;	rjmp TIMER1 	; COMPB Timer/Counter1 Compare Match B
+reti; 	rjmp TIMER1	; OVF Timer/Counter1 Overflow
+reti; 	rjmp TIMER0 	; OVF Timer/Counter0 Overflow
+reti; 	rjmp SPI, STC 	; Serial Transfer Complete
+reti;	rjmp USART_RXC 	; RXC USART, Rx Complete
+reti;	rjmp USART_DRE	; UDRE USART Data Register Empty
+reti;	rjmp USART_TXC 	; TXC USART, Tx Complete
+reti;	rjmp ADC 		; ADC Conversion Complete
+reti; 	rjmp EE_RDY 	; EEPROM Ready
+reti; 	rjmp ANA_COMP 	; Analog Comparator
+reti; 	rjmp TWI 		; Two-wire Serial Interface
+reti;	rjmp SPM_RDY 	; Store Program Memory Ready
+;######				INTERRUPTS HANDLERS				#####
+
+;######				SUBROUTINES & FUNCTIONS				#####
+
+;######					MAIN PROGRAM					#####
+RESET: 
+STACKINIT
+	
+
+
+	

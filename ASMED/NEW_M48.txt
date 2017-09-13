@@ -1,0 +1,41 @@
+;###### 												#####
+.include "D:\!lab\asm\inc\m8def.inc"
+
+;######				 INTERRUPTS TABLE 					#####
+rjmp RESET	;External pin, power-on reset, brown-out reset and watchdog system reset
+reti;	rjmp EXT_INT0		; External interrupt request 0
+reti;	rjmp EXT_INT2 		; External interrupt request 1
+reti;	rjmp PCINT0 		; Pin change interrupt request 0
+reti;	rjmp PCINT1 		; Pin change interrupt request 1
+reti;	rjmp PCINT2 		; Pin change interrupt request 2
+reti;	rjmp WATCHDOG		; Watchdog time-out interrupt
+reti;	rjmp TIM2_COMPA 	; COMPA Timer/Counter2 compare match A
+reti;	rjmp TIM2_COMPB 	; Timer/Counter2 compare match B
+reti;	rjmp TIM2_OVF 		; Timer/Counter2 overflow
+reti;	rjmp TIM1_CAPT 		; Timer/Counter1 capture event
+reti;	rjmp TIM1_COMPA 	; Timer/Counter1 compare match A
+reti;	rjmp TIM1_COMPB	; Timer/Coutner1 compare match B
+reti;	rjmp TIM1_OVF 		; Timer/Counter1 overflow
+reti;	rjmp TIM0_COMPA	; Timer/Counter0 compare match A
+reti;	rjmp TIM0_COMPB	; Timer/Counter0 compare match B
+reti;	rjmp TIM0_OVF 		; Timer/Counter0 overflow
+reti;	rjmp SPI_STC 		; STC SPI serial transfer complete
+reti;	rjmp USART_RX		; USART Rx complete
+reti;	rjmp USART_UDRE	; USART, data register empty
+reti;	rjmp USART_		; TX USART, Tx complete
+reti;	rjmp ADC_RDY 		; ADC conversion complete
+reti;	rjmp EE_RDY		; EEPROM ready
+reti;	rjmp ANA_COMP 		; Analog comparator
+reti;	rjmp TWI 			; 2-wire serial interface
+reti;	rjmp SPM_READY 	; Store program memory ready
+;######				INTERRUPTS HANDLERS				#####
+
+;######				SUBROUTINES & FUNCTIONS				#####
+
+;######					MAIN PROGRAM					#####
+RESET: 
+INITIALIZATION
+	
+
+
+	
